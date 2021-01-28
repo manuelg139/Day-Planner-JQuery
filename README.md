@@ -25,4 +25,4 @@ THEN the saved events persist
 https://manuelg139.github.io/Day-Planner-JQuery/
 
 ## Screenshots
-<img src="./">
+![Screen Shot 2021-01-27 at 11 51 52 PM](https://user-images.githubusercontent.com/75399668/106096219-b9c94d00-60fa-11eb-8ea8-463b7126f191.png)
