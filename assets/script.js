@@ -18,7 +18,7 @@ $(document).ready(function() {
         $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     };
 
-
+    // allows the colums to color cordinate with the currentTime fucntion
     function colorTime(){
         $("textarea").each(function(){
             let hour = moment().hours();
@@ -36,9 +36,29 @@ $(document).ready(function() {
     };
 
 
+    // Adding a click event to save input to storage
+    function addStorage(){
+        $(".saveBtn").click(function(){
+            let calInputs = $(this).siblings(".event").val();
+            let inputsLoc = $(this).siblings(".event").attr("id");
+            localStorage.setItem(inputsLoc,calInputs);
+        });
+    }
+
+
+    // rendering inputs into textboxes after refreshing the page
+    /* function inputStorage(){
+    
+
+        } */
+
+
+
+//calling back all the previous functions
 colorTime();
 setInterval(currentTime, 1000);
-
+addStorage();
+/* inputStorage(); */
 });
 
 
