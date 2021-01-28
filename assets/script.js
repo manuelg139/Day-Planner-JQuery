@@ -46,19 +46,22 @@ $(document).ready(function() {
     }
 
 
-    // rendering inputs into textboxes after refreshing the page
-    /* function inputStorage(){
+  // rendering inputs into textboxes after refreshing the page
+   function inputStorage(){
+        $(".event").each(function(){
+            let inputText = $(this).attr("id");
+            $(this).val(localStorage.getItem(inputText));
+            
+        });
+    }
+
+
     
-
-        } */
-
-
-
 //calling back all the previous functions
 colorTime();
 setInterval(currentTime, 1000);
 addStorage();
-/* inputStorage(); */
+inputStorage();
 });
 
 
